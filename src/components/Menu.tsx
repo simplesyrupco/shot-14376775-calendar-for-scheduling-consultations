@@ -29,15 +29,20 @@ export const Menu = () => {
                     layout="position"
                     onClick={() => handleMenuToggle?.()}
                     whileTap={{ scale: 0.9 }}
-                    style={{ rotate: isMenuExpanded ? 180 : 0 }}
-                    className="absolute cursor-pointer flex justify-center items-center -right-2.5 top-2 w-5 h-5 rounded-2 bg-indigo-500"
+                    className="absolute z-10 cursor-pointer -right-4.5 p-2 top-1"
                 >
-                    <ChevronRight
-                        width={6}
-                        height={9}
-                        color="white"
-                        className=" translate-x-px"
-                    />
+                    <motion.div
+                        layout="position"
+                        style={{ rotate: isMenuExpanded ? 180 : 0 }}
+                        className="flex justify-center items-center w-5 h-5 rounded-2 bg-indigo-500"
+                    >
+                        <ChevronRight
+                            width={6}
+                            height={9}
+                            color="white"
+                            className=" translate-x-px"
+                        />
+                    </motion.div>
                 </motion.div>
                 {menuItems.map((item) => {
                     const { key, icon, iconWidth, iconHeight, label } = item
