@@ -11,8 +11,8 @@ export const Logo = () => {
                 d="M1.5 9.5L5.5 5L8.5 7.5L12 3.5L15 6L18.5 1"
                 stroke="white"
                 stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     )
